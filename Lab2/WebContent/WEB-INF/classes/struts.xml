@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="Lab2" extends="struts-default">
+
+		<action name="queryall" class="com.lining.struts2.bookaction"
+			method="queryall">
+			<result name="success">/index.jsp</result>
+		</action>
+
+		<action name="querytitle" class="com.lining.struts2.bookaction"
+			method="querytitle">
+			<result name="success">/index.jsp</result>
+		</action>
+
+		<action name="add" class="com.lining.struts2.bookaction"
+			method="create">
+			<result name="success">/addsuccess.jsp</result>
+			<result name="error">/addauthor.jsp</result>
+		</action>
+
+		<action name="addauthor" class="com.lining.struts2.authoraction"
+			method="create">
+			<result name="success">/addsuccess.jsp</result>
+		</action>
+
+		<action name="info" class="com.lining.struts2.bookaction"
+			method="queryisbn">
+			<result name="success">/index.jsp</result>
+		</action>
+		
+		<action name="delete" class="com.lining.struts2.bookaction"
+			method="delete">
+			<result name="success">/delsuccess.jsp</result>
+		</action>
+		
+		<action name="modify" class="com.lining.struts2.bookaction"
+			method="modify">
+			<result name="success">/add.jsp</result>
+		</action>
+		
+	</package>
+</struts>
